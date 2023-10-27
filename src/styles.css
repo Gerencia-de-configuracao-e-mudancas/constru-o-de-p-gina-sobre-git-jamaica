@@ -1,26 +1,30 @@
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap');
 
 * {
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-h1, p{
+h1, h2, h3, p, hr{
     margin: 20px 0;
 }
 
-h1{
+h1, h2{
     text-align: center;
-    color: #08092d;
 }
 
+h1, h2, h3 {
+    color: #08092d;
+}
 
 .wrapper {
     display: flex;
     justify-content: center; 
     align-items: center; 
+    background-color: red;
     width: 100vw;
     min-height: 100vh;
     background-color: black; 
@@ -29,11 +33,11 @@ h1{
 main {
     width: 95vw;
     margin: 0rem 2rem 0rem 2rem;
-    background: linear-gradient(to right, #314338 50%, #92885a 50%);
+    background: linear-gradient(to right, #314338 50%, #92885a 50%);    border-radius: 5px 5px 0px 0px;
     display: flex;
     justify-content: center; 
     align-items: center; 
-    height: 100vh;
+    border-radius: 0;
 }
 
 article {
@@ -43,7 +47,6 @@ article {
     border-left: 2px solid #08092d;
     border-right: 2px solid #08092d;
     background-color: white;
-    height: 100vh;
 }
 
 .by{
@@ -76,4 +79,30 @@ article {
 
 .link > div > a:hover{
     background-color: #90d285;
+}
+
+.image-div{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.image-div > img {
+    width: 100%;
+}
+
+.soft-hr {
+    color: white;
+    border-color: white;
+}
+
+.sample{
+    font-size: 0.9rem;
+    background-color: #08092d;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    overflow-wrap: break-word;
+    word-wrap: break-word; 
+    white-space: pre-wrap; 
 }

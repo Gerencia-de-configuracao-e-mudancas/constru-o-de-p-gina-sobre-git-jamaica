@@ -37,10 +37,238 @@
               Usar o git pela linha de comando pode parecer meio complicado.
               Para te ajudar com isso, nós decidimos criar uma lista com alguns
               comandos basicos do Git, vamos lhe dizer oque cada um faz e como
-              usá-lo. Esperamos que quando você termine de ler este guia, esteja
+              usalo. Esperamos que quando você termine de ler este guia, esteja
               apto para trabalhar em empresas como a RedeTV, SkyGato, etc.
             </p>
-          </div>    
+          </div>
+
+          <hr />
+
+          <div class="image-div" style="background: #ffffff">
+            <img
+              src="./images/Git-Icon-1788C.png"
+              alt="this guide is a Git toolbox"
+            />
+          </div>
+          <h2 id="local">Trabalhando com repositórios Locais</h2>
+          <hr class="soft-hr" />
+
+          <div class="comand-box">
+            <h3 id="git-init">git init</h3>
+          
+            <p>
+              O comando git init é usado para transformar um diretório comum em um repositório Git vazio. Este é o primeiro passo para criar um repositório onde você poderá versionar seu código.            </p>
+            <p>Uso:</p>
+          
+            <pre class="sample"><code># Navegue até o diretório onde deseja iniciar o repositório:
+$ cd caminho/código
+          
+# Inicialize o repositório Git no diretório:
+$ git init</code></pre>
+          
+            <p>Na prática:</p>
+          
+            <pre class="sample"><code># Indo até o repositório do projeto
+$ cd ~/site
+          
+# Inicializando um repositório git nesse diretório
+$ git init
+Repositório Git vazio inicializado em ~/site/.git/</code></pre>
+          </div>
+          
+
+          <hr class="soft-hr" />
+
+          <div class="command-box">
+            <h3 id="git-add">git add</h3>
+          
+            <p>
+              O comando git add é como colocar seus arquivos em uma bandeja de preparação antes de confirmá-los no Git. Você coloca os arquivos na bandeja um por um ou todos de uma vez. É uma etapa necessária antes de salvar as mudanças no Git. Isso ajuda a escolher quais alterações você deseja incluir na próxima "salvação". Em resumo, o git add coloca seus arquivos na fila para serem confirmados no Git.            </p>
+          
+            <p>Uso:</p>
+          
+            <pre class="sample"><code>$ git add &lt;nome do arquivo ou diretório&gt;</code></pre>
+          
+            <p>Na Prática:</p>
+          
+            <pre class="sample"><code># Para adicionar todos os arquivos não preparados:
+$ git add .
+          
+# Para adicionar um arquivo específico:
+$ git add index.html
+          
+# Para adicionar um diretório inteiro:
+$ git add css</code></pre>
+          </div>
+          
+          <hr class="soft-hr" /> 
+
+          <div class="command-box">
+            <h3 id="git-commit">git commit</h3>
+            <p>
+              O comando git commit é como salvar um ponto de verificação das mudanças que você fez em seus arquivos. Cada ponto de verificação tem um número único. É importante adicionar uma mensagem a cada ponto de verificação para dizer o que foi feito. Isso ajuda a lembrar ou explicar as mudanças. Em resumo, git commit é como salvar as mudanças no Git, e a mensagem ajuda a entender o que foi feito.
+            </p>
+          
+            <p>Uso:</p>
+          
+            <pre class="sample"><code># Adicionando um commit com mensagem
+$ git commit -m "Meu Primeiro Commit"</code></pre>
+          
+            <p>Na Prática:</p>
+          
+            <pre class="sample"><code>$ git commit -m "Meu Primeiro Commit"
+[main (root-commit) 919941c] Meu Primeiro Commit
+1 file changed, 0 insertions(+), 0 deletions(-)
+create mode 100644 index.html</code></pre>
+          </div>
+          
+          <hr class="soft-hr" />
+
+          <div class="command-box">
+            <h3 id="git-status">git status</h3>
+                  
+            <p>
+              O comando git status fornece informações sobre o estado atual do seu repositório Git. Ele mostra o ramo em que você está trabalhando e se há arquivos modificados. Se houver arquivos modificados, ele informará se essas alterações foram ou não preparadas para uma confirmação. Em resumo, o git status ajuda a manter o controle das mudanças em seu projeto Git e indica se você precisa tomar medidas, como preparar e confirmar as alterações.
+            </p>  
+            <p>Uso:</p>
+          
+            <pre class="sample"><code>$ git status</code></pre>
+          
+            <p>Na Prática:</p>
+          
+            <pre class="sample"><code># Mensagem quando os arquivos não foram preparados (git add)
+$ git status
+No ramo main
+Arquivos não monitorados:
+    (utilize "git add <arquivo>..." para incluir o que será submetido)
+            <span style="color: red;">index.txt</span>
+              
+nada adicionado ao envio mas arquivos não registrados estão presentes (use "git add" to registrar)
+          
+# Mensagem quando os arquivos foram preparados, mas não confirmados (git commit)
+$ git status
+No ramo main
+Mudanças a serem submetidas:
+      (use "git restore --staged <file>..." to unstage)
+	         <span style="color: greenyellow">new file:   z.txt</span>
+
+# Mensagem quando todos os arquivos foram preparados e confirmados
+$ git status
+No ramo main
+nothing to commit, working tree clean</code></pre>
+          </div>
+          
+
+          <hr class="soft-hr" />
+        <div class="command-box">
+          <h3 id="git-config">git config</h3>
+
+          <p>
+            O comando git config permite que você ajuste configurações importantes no Git, como seu nome de usuário (user.name) e endereço de email (user.email). Essas configurações determinam como seus commits são identificados em seu próprio computador.          </p>
+
+          <p>Uso:</p>
+
+          <pre
+            class="sample"
+          ><code>$ git config &lt;setting&gt; &lt;command&gt;</code></pre>
+
+          <p>Na Prática:</p>
+
+          <pre class="sample"><code># Configurando globalmente (para todos os seus repositórios Git)
+$ git config --global user.email "erick@only.com"
+$ git config --global user.name "Erick Ribeiro"
+
+# Configurando localmente (apenas para o repositório atual)
+$ git config user.email "erick@only.com"
+$ git config user.name "Erick Ribeiro"</code></pre>
+        </div>
+
+          <hr class="soft-hr" />
+        <div class="command-box">
+          <h3 id="git-branch">git branch</h3>
+
+          <p>
+            O comando git branch é usado para verificar em qual branch o repositório local está, criar um nova branch ou excluir uma branch existente.
+          </p>
+
+          <p>Uso:</p>
+
+          <pre class="sample"><code># Cria uma nova branch
+$ git branch &lt;nome_branch&gt;
+
+# Lista as branches locais e remotas
+$ git branch -a
+
+# Apaga uma branch
+$ git branch -d &lt;nome_branch&gt;</code></pre>
+
+          <p>Na Prática:</p>
+
+          <pre class="sample"><code># Criando uma nova branch
+$ git branch new_feature
+
+# Listando as branches
+$ git branch -a
+* <span style="color: greenyellow">main</span>
+  new_feature
+  
+# Apagando uma branch
+$ git branch -d new_feature
+Deleted branch new_feature (was 0254c3d).</code></pre>
+        </div>
+
+          <hr class="soft-hr" />
+
+        <div class="command-box">
+          <h3 id="git-checkout">git checkout</h3>
+
+          <p>
+            O comando git checkout é usado para começar a trabalhar em uma branch diferente no Git. Ele permite que você mude o foco do seu trabalho para outra branch.
+          </p>
+
+          <p>Uso:</p>
+
+          <pre class="sample"><code># Muda o para uma branch existente
+$ git checkout &lt;nome_branch&gt;
+
+# Cria uma branch e muda imediatamente para ela
+$ git checkout -b &lt;nome_branch&gt;</code></pre>
+
+          <p>Na Prática:</p>
+
+          <pre class="sample"><code># Mudando para a branch 'new_feature'
+$ git checkout new_feature
+Switched to branch 'new_feature'
+
+# Criando a branch 'staging' e mudando para ela
+$ git checkout -b staging
+Switched to a new branch 'staging'</code></pre>
+        </div>
+
+          <hr class="soft-hr" />
+        <div class="command-box">
+          <h3 id="git-merge">git merge</h3>
+
+          <p>
+            O comando git merge é usado para combinar as mudanças de uma branch específica na branch atual. Por exemplo, você pode usar isso para incorporar as alterações feitas em uma branch de desenvolvimento em sua branch principal.          </p>
+
+          <p>Uso:</p>
+
+          <pre class="sample"><code># Mescla as alterações da branch especificada na branch atual
+$ git merge &lt;branch_name&gt;</code></pre>
+
+          <p>Na Prática:</p>
+
+          <pre class="sample"><code># Mesclando as alterações da branch 'new feature' na branch atual
+$ git merge new_feature
+Updating ed95ac5..453f8a6
+Fast-forward
+ mataGrama.exe | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 mataGrama.exe</code></pre>
+        </div>
+
+        <hr />  
         </article>
       </main>
     </div>
