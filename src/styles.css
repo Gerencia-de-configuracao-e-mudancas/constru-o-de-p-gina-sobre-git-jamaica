@@ -7,6 +7,16 @@
     padding: 0;
 }
 
+h1, p{
+    margin: 20px 0;
+}
+
+h1{
+    text-align: center;
+    color: #08092d;
+}
+
+
 .wrapper {
     display: flex;
     justify-content: center; 
@@ -34,4 +44,36 @@ article {
     border-right: 2px solid #08092d;
     background-color: white;
     height: 100vh;
+}
+
+.by{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.link{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.link > div > a{
+    color: #08092d;
+    text-decoration: none;
+    display: flex;
+    gap: 10px;
+    background-color: white;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 5px;
+    border: 2px solid #08092d;
+}
+
+.link > div > a > img {
+    height: 20px;
+}
+
+.link > div > a:hover{
+    background-color: #90d285;
 }
