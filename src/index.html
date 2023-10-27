@@ -43,55 +43,55 @@
           </div>
 
           <hr />
+          <div class="sessao">
+            <div class="image-div" style="background: #ffffff">
+              <img
+                src="./images/Git-Icon-1788C.png"
+                alt="this guide is a Git toolbox"
+              />
+            </div>
+            <h2 id="local">Trabalhando com repositórios Locais</h2>
+            <hr class="soft-hr" />
 
-          <div class="image-div" style="background: #ffffff">
-            <img
-              src="./images/Git-Icon-1788C.png"
-              alt="this guide is a Git toolbox"
-            />
-          </div>
-          <h2 id="local">Trabalhando com repositórios Locais</h2>
-          <hr class="soft-hr" />
-
-          <div class="comand-box">
-            <h3 id="git-init">git init</h3>
+            <div class="comand-box">
+              <h3 id="git-init">git init</h3>
+            
+              <p>
+                O comando git init é usado para transformar um diretório comum em um repositório Git vazio. Este é o primeiro passo para criar um repositório onde você poderá versionar seu código.            </p>
+              <p>Uso:</p>
           
-            <p>
-              O comando git init é usado para transformar um diretório comum em um repositório Git vazio. Este é o primeiro passo para criar um repositório onde você poderá versionar seu código.            </p>
-            <p>Uso:</p>
-          
-            <pre class="sample"><code># Navegue até o diretório onde deseja iniciar o repositório:
+              <pre class="sample"><code># Navegue até o diretório onde deseja iniciar o repositório:
 $ cd caminho/código
           
 # Inicialize o repositório Git no diretório:
 $ git init</code></pre>
           
-            <p>Na prática:</p>
+              <p>Na prática:</p>
           
-            <pre class="sample"><code># Indo até o repositório do projeto
+              <pre class="sample"><code># Indo até o repositório do projeto
 $ cd ~/site
           
 # Inicializando um repositório git nesse diretório
 $ git init
 Repositório Git vazio inicializado em ~/site/.git/</code></pre>
-          </div>
+            </div>
           
 
-          <hr class="soft-hr" />
+            <hr class="soft-hr" />
 
-          <div class="command-box">
-            <h3 id="git-add">git add</h3>
+            <div class="command-box">
+              <h3 id="git-add">git add</h3>
           
-            <p>
-              O comando git add é como colocar seus arquivos em uma bandeja de preparação antes de confirmá-los no Git. Você coloca os arquivos na bandeja um por um ou todos de uma vez. É uma etapa necessária antes de salvar as mudanças no Git. Isso ajuda a escolher quais alterações você deseja incluir na próxima "salvação". Em resumo, o git add coloca seus arquivos na fila para serem confirmados no Git.            </p>
+              <p>
+                O comando git add é como colocar seus arquivos em uma bandeja de preparação antes de confirmá-los no Git. Você coloca os arquivos na bandeja um por um ou todos de uma vez. É uma etapa necessária antes de salvar as mudanças no Git. Isso ajuda a escolher quais alterações você deseja incluir na próxima "salvação". Em resumo, o git add coloca seus arquivos na fila para serem confirmados no Git.            </p>
           
-            <p>Uso:</p>
+              <p>Uso:</p>
           
-            <pre class="sample"><code>$ git add &lt;nome do arquivo ou diretório&gt;</code></pre>
+              <pre class="sample"><code>$ git add &lt;nome do arquivo ou diretório&gt;</code></pre>
           
-            <p>Na Prática:</p>
+              <p>Na Prática:</p>
           
-            <pre class="sample"><code># Para adicionar todos os arquivos não preparados:
+              <pre class="sample"><code># Para adicionar todos os arquivos não preparados:
 $ git add .
           
 # Para adicionar um arquivo específico:
@@ -99,44 +99,44 @@ $ git add index.html
           
 # Para adicionar um diretório inteiro:
 $ git add css</code></pre>
-          </div>
+            </div>
           
-          <hr class="soft-hr" /> 
+            <hr class="soft-hr" /> 
 
-          <div class="command-box">
-            <h3 id="git-commit">git commit</h3>
-            <p>
-              O comando git commit é como salvar um ponto de verificação das mudanças que você fez em seus arquivos. Cada ponto de verificação tem um número único. É importante adicionar uma mensagem a cada ponto de verificação para dizer o que foi feito. Isso ajuda a lembrar ou explicar as mudanças. Em resumo, git commit é como salvar as mudanças no Git, e a mensagem ajuda a entender o que foi feito.
-            </p>
+            <div class="command-box">
+              <h3 id="git-commit">git commit</h3>
+              <p>
+                O comando git commit é como salvar um ponto de verificação das mudanças que você fez em seus arquivos. Cada ponto de verificação tem um número único. É importante adicionar uma mensagem a cada ponto de verificação para dizer o que foi feito. Isso ajuda a lembrar ou explicar as mudanças. Em resumo, git commit é como salvar as mudanças no Git, e a mensagem ajuda a entender o que foi feito.
+              </p>
           
-            <p>Uso:</p>
+              <p>Uso:</p>
           
-            <pre class="sample"><code># Adicionando um commit com mensagem
+              <pre class="sample"><code># Adicionando um commit com mensagem
 $ git commit -m "Meu Primeiro Commit"</code></pre>
           
-            <p>Na Prática:</p>
+              <p>Na Prática:</p>
           
-            <pre class="sample"><code>$ git commit -m "Meu Primeiro Commit"
+              <pre class="sample"><code>$ git commit -m "Meu Primeiro Commit"
 [main (root-commit) 919941c] Meu Primeiro Commit
 1 file changed, 0 insertions(+), 0 deletions(-)
 create mode 100644 index.html</code></pre>
-          </div>
+            </div>
           
-          <hr class="soft-hr" />
+            <hr class="soft-hr" />
 
-          <div class="command-box">
-            <h3 id="git-status">git status</h3>
+            <div class="command-box">
+              <h3 id="git-status">git status</h3>
                   
-            <p>
-              O comando git status fornece informações sobre o estado atual do seu repositório Git. Ele mostra o ramo em que você está trabalhando e se há arquivos modificados. Se houver arquivos modificados, ele informará se essas alterações foram ou não preparadas para uma confirmação. Em resumo, o git status ajuda a manter o controle das mudanças em seu projeto Git e indica se você precisa tomar medidas, como preparar e confirmar as alterações.
-            </p>  
-            <p>Uso:</p>
+              <p>
+                O comando git status fornece informações sobre o estado atual do seu repositório Git. Ele mostra o ramo em que você está trabalhando e se há arquivos modificados. Se houver arquivos modificados, ele informará se essas alterações foram ou não preparadas para uma confirmação. Em resumo, o git status ajuda a manter o controle das mudanças em seu projeto Git e indica se você precisa tomar medidas, como preparar e confirmar as alterações.
+              </p>  
+              <p>Uso:</p>
           
-            <pre class="sample"><code>$ git status</code></pre>
+              <pre class="sample"><code>$ git status</code></pre>
           
-            <p>Na Prática:</p>
+              <p>Na Prática:</p>
           
-            <pre class="sample"><code># Mensagem quando os arquivos não foram preparados (git add)
+              <pre class="sample"><code># Mensagem quando os arquivos não foram preparados (git add)
 $ git status
 No ramo main
 Arquivos não monitorados:
@@ -156,44 +156,44 @@ Mudanças a serem submetidas:
 $ git status
 No ramo main
 nothing to commit, working tree clean</code></pre>
-          </div>
-          
+          </div>  
 
           <hr class="soft-hr" />
-        <div class="command-box">
-          <h3 id="git-config">git config</h3>
 
-          <p>
-            O comando git config permite que você ajuste configurações importantes no Git, como seu nome de usuário (user.name) e endereço de email (user.email). Essas configurações determinam como seus commits são identificados em seu próprio computador.          </p>
+            <div class="command-box">
+              <h3 id="git-config">git config</h3>
 
-          <p>Uso:</p>
+              <p>
+                O comando git config permite que você ajuste configurações importantes no Git, como seu nome de usuário (user.name) e endereço de email (user.email). Essas configurações determinam como seus commits são identificados em seu próprio computador.          </p>
 
-          <pre
-            class="sample"
-          ><code>$ git config &lt;setting&gt; &lt;command&gt;</code></pre>
+              <p>Uso:</p>
 
-          <p>Na Prática:</p>
+              <pre
+                class="sample"
+              ><code>$ git config &lt;setting&gt; &lt;command&gt;</code></pre>
 
-          <pre class="sample"><code># Configurando globalmente (para todos os seus repositórios Git)
+              <p>Na Prática:</p>
+
+              <pre class="sample"><code># Configurando globalmente (para todos os seus repositórios Git)
 $ git config --global user.email "erick@only.com"
 $ git config --global user.name "Erick Ribeiro"
 
 # Configurando localmente (apenas para o repositório atual)
 $ git config user.email "erick@only.com"
 $ git config user.name "Erick Ribeiro"</code></pre>
-        </div>
+            </div>
 
-          <hr class="soft-hr" />
-        <div class="command-box">
-          <h3 id="git-branch">git branch</h3>
+            <hr class="soft-hr" />
+            <div class="command-box">
+              <h3 id="git-branch">git branch</h3>
 
-          <p>
-            O comando git branch é usado para verificar em qual branch o repositório local está, criar um nova branch ou excluir uma branch existente.
-          </p>
+              <p>
+                O comando git branch é usado para verificar em qual branch o repositório local está, criar um nova branch ou excluir uma branch existente.
+              </p>
 
-          <p>Uso:</p>
+              <p>Uso:</p>
 
-          <pre class="sample"><code># Cria uma nova branch
+              <pre class="sample"><code># Cria uma nova branch
 $ git branch &lt;nome_branch&gt;
 
 # Lista as branches locais e remotas
@@ -204,7 +204,7 @@ $ git branch -d &lt;nome_branch&gt;</code></pre>
 
           <p>Na Prática:</p>
 
-          <pre class="sample"><code># Criando uma nova branch
+              <pre class="sample"><code># Criando uma nova branch
 $ git branch new_feature
 
 # Listando as branches
@@ -215,58 +215,209 @@ $ git branch -a
 # Apagando uma branch
 $ git branch -d new_feature
 Deleted branch new_feature (was 0254c3d).</code></pre>
-        </div>
+          </div>
 
           <hr class="soft-hr" />
 
-        <div class="command-box">
-          <h3 id="git-checkout">git checkout</h3>
+          <div class="command-box">
+            <h3 id="git-checkout">git checkout</h3>
 
-          <p>
-            O comando git checkout é usado para começar a trabalhar em uma branch diferente no Git. Ele permite que você mude o foco do seu trabalho para outra branch.
-          </p>
+            <p>
+              O comando git checkout é usado para começar a trabalhar em uma branch diferente no Git. Ele permite que você mude o foco do seu trabalho para outra branch.
+            </p>
 
-          <p>Uso:</p>
+            <p>Uso:</p>
 
-          <pre class="sample"><code># Muda o para uma branch existente
+            <pre class="sample"><code># Muda o para uma branch existente
 $ git checkout &lt;nome_branch&gt;
 
 # Cria uma branch e muda imediatamente para ela
 $ git checkout -b &lt;nome_branch&gt;</code></pre>
 
-          <p>Na Prática:</p>
+            <p>Na Prática:</p>
 
-          <pre class="sample"><code># Mudando para a branch 'new_feature'
+            <pre class="sample"><code># Mudando para a branch 'new_feature'
 $ git checkout new_feature
 Switched to branch 'new_feature'
 
 # Criando a branch 'staging' e mudando para ela
 $ git checkout -b staging
 Switched to a new branch 'staging'</code></pre>
-        </div>
+          </div>
 
           <hr class="soft-hr" />
-        <div class="command-box">
-          <h3 id="git-merge">git merge</h3>
+          <div class="command-box">
+            <h3 id="git-merge">git merge</h3>
 
-          <p>
-            O comando git merge é usado para combinar as mudanças de uma branch específica na branch atual. Por exemplo, você pode usar isso para incorporar as alterações feitas em uma branch de desenvolvimento em sua branch principal.          </p>
+            <p>
+              O comando git merge é usado para combinar as mudanças de uma branch específica na branch atual. Por exemplo, você pode usar isso para incorporar as alterações feitas em uma branch de desenvolvimento em sua branch principal.          </p>
 
-          <p>Uso:</p>
+            <p>Uso:</p>
 
-          <pre class="sample"><code># Mescla as alterações da branch especificada na branch atual
+            <pre class="sample"><code># Mescla as alterações da branch especificada na branch atual
 $ git merge &lt;branch_name&gt;</code></pre>
 
-          <p>Na Prática:</p>
+            <p>Na Prática:</p>
 
-          <pre class="sample"><code># Mesclando as alterações da branch 'new feature' na branch atual
+            <pre class="sample"><code># Mesclando as alterações da branch 'new feature' na branch atual
 $ git merge new_feature
 Updating ed95ac5..453f8a6
 Fast-forward
  mataGrama.exe | 0
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 mataGrama.exe</code></pre>
+          </div>
+
+      </div>
+
+      <hr />
+      <div class="sessao">
+
+        <div class="image-div" style="background: #ffffff">
+          <img
+            src="./images/25231.png"
+            alt="imagem do github"
+          />
         </div>
+
+          <h2 id="remote">Trabalhando com repositórios remotos</h2>
+          <hr class="soft-hr" />
+
+        <div class="command-box">
+          <h3 id="git-remote">git remote</h3>
+
+          <p>
+            O comando git remote é utilizado para conectar um repositório local a um repositório remoto. Um repositório remoto pode ser nomeado para evitar a necessidade de lembrar a URL do repositório.
+          </p>
+
+          <p>Uso:</p>
+
+          <pre class="sample"><code># Adicionar um repositório remoto:
+$ git remote &lt;comando&gt; &lt;nome_remoto&gt; &lt;URL_remoto&gt;
+
+# Listar os repositórios remotos
+$ git remote -v</code></pre>
+
+          <p>Na Prática:</p>
+
+          <pre
+            class="sample"
+          ><code># Adicionando um repositório remoto com o nome "origin"
+$ git remote add origin URL_do_repositório_remoto
+
+# Listando os repositórios remotos
+$ git remote -v
+git remote add origin URL_do_repositório_remoto (fetch)
+git remote add origin URL_do_repositório_remoto (push)</code></pre>
+
+          <p>
+            <em
+              >Observação: Um repositório remoto pode receber qualquer nome. É prática comum nomear o repositório remoto como 'origin'.</em
+            >
+          </p>
+
+        </div>
+        <div>
+          <hr class="soft-hr" />
+          <h3 id="git-clone">git clone</h3>
+
+          <p>
+            O comando git clone é usado para criar uma cópia local de trabalho de um repositório remoto existente. Ele faz o download do repositório e cria uma cópia local em seu computador. Clonar é o equivalente ao git init ao trabalhar com um repositório remoto. O Git criará um diretório local com todos os arquivos e o histórico do repositório.
+          </p>
+
+          <p>Uso:</p>
+
+          <pre class="sample"><code>$ git clone &lt;URL_remoto&gt;</code></pre>
+
+          <p>Na Prática:</p>
+
+          <pre
+            class="sample"
+          ><code>$ git clone git@nome_conta.git.gtt.com:/nome_conta/repositorio_nome.git
+Cloning into 'repositorio_nome'...
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 5 (delta 0), reused 0 (delta 0)
+Receiving objects: 100% (5/5), 3.08 KiB | 0 bytes/s, done.
+Checking connectivity... done.</code></pre>
+        </div>
+
+          <hr class="soft-hr" />
+        <div class="command-box">
+          <h3 id="git-pull">git pull</h3>
+
+          <p>
+            O comando git pull é usado para obter a versão mais recente de um repositório. Isso significa trazer as alterações do repositório remoto para o computador local.
+          </p>
+
+          <p>Uso:</p>
+
+          <pre
+            class="sample"
+          ><code>$ git pull &lt;URL_remoto/nome_remoto&gt &lt;nome_branch&gt;</code></pre>
+
+          <p>Na Prática:</p>
+
+          <pre class="sample"><code># Atualizar a partir de um repositório remoto nomeado 'origin'
+$ git pull origin staging
+From nome_conta.git.jeredebe.com:/nome_conta/nome_repositorio
+ * branch            staging    -&gt; FETCH_HEAD
+ * [new branch]      staging    -&gt; origin/staging
+Already up-to-date.
+
+# Atualizar a partir de uma URL (não é comum)
+$ git pull git@nome_conta.git.jeredebe.com:/nome_conta/nome_repositorio.git staging
+From nome_conta.git.jeredebe.com:/nome_conta/nome_repositorio
+ * branch            staging    -&gt; FETCH_HEAD
+ * [new branch]      staging    -&gt; origin/staging
+Already up-to-date.</code></pre>
+        </div>
+
+          <hr class="soft-hr" />
+        <div class="command-box">
+          <h3 id="git-push">git push</h3>
+
+          <p>
+            O comando git push é utilizado para enviar os commits locais para o repositório remoto. Ele requer dois parâmetros: o repositório remoto e o branch para o qual você deseja enviar os commits.
+          </p>
+
+          <p>Uso:</p>
+
+          <pre
+            class="sample"
+          ><code>$ git push &lt;URL_remoto/nome_remoto&gt; &lt;branch&gt;
+
+# Push all local branches to remote repository
+$ git push —all</code></pre>
+
+          <p>Na Prática:</p>
+
+          <pre
+            class="sample"
+          ><code># Enviar um branch específico para um repositório remoto com um nome remoto nomeado 'origin'
+$ git push origin staging
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 734 bytes | 0 bytes/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+To git@nome_conta.git.jeredebe.com:/nome_conta/nome_repositorio.git
+   ad189cb..0254c3d  SecretTesting -&gt; SecretTesting
+
+# Enviar todos os branches locais para o repositório remoto
+$ git push --all
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 373 bytes | 0 bytes/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To git@nome_conta.git.jeredebe.com:/nome_conta/nome_repositorio.git
+   0d56917..948ac97  master -&gt; master
+   ad189cb..0254c3d  SecretTesting -&gt; SecretTesting</code></pre>
+
+        </div>
+      </div>
 
         <hr />  
         </article>
