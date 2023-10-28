@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
     <link rel="shortcut icon" href="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" type="image/x-icon">
-    <title>Comandos Basicos do GIT</title>
+    <title>Comandos Básicos do GIT</title>
   </head>
   <body>
     <div class="wrapper">
       <main>
         <article>
+          <span>made by: </span>
           <div class="by">
-            <span>made by: </span>
               <div class="link">
                 <div>
-                    <a href="https://github.com/ericksjp" >
+                    <a href="https://github.com/ericksjp" target="_blank">
                         <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="">
                         <strong>GitHub: ericksjp</strong>
                     </a>
@@ -24,7 +24,7 @@
 
                 <div class="link">
                   <div>
-                      <a href="https://github.com/tassomoreira" >
+                      <a href="https://github.com/tassomoreira" target="_blank">
                           <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="">
                           <strong>GitHub: tassomoreira</strong>
                       </a>
@@ -32,7 +32,7 @@
                 </div>
           </div>
           <div class="introducao">
-            <h1>Comandos Basicos do GIT</h1>
+            <h1>Comandos Básicos do GIT</h1>
 
             <p>
               Usar o git pela linha de comando pode parecer meio complicado.
@@ -41,21 +41,75 @@
               usalo. Esperamos que quando você termine de ler este guia, esteja
               apto para trabalhar em empresas como a RedeTV, SkyGato, etc.
             </p>
+
+            <p>Fonte de pesquisa: <a href="http://guides.beanstalkapp.com/version-control/common-git-commands.html" target="_blank">Common Git Commands</a></p>
+          </div>
+
+          <div class="indice">
+            <div class="ind-box">
+              <button class="botao-indice" data-value="0" isActive ="true"><img src="./images/arrows-up-double33_98249.png" alt="" id="arrowIMG0"></button>
+              <h4 style="font-size: 18px;">Índice</h4>
+            </div>
+            <hr class="indice-hr">
+              <ul class="content" id="content0">
+                <li>
+                  <div class="ind-box">
+                    <button class="botao-indice" data-value="1" isActive="false"><img src="./images/arrows-down-double34_97743.png" alt="" id="arrowIMG1"></button>
+                    <a href="#repositorios_locais">Trabalhando com repositórios locais</a>
+                  </div>
+                  <ul class="content" id="content1">
+                    <li><a href="#git-init">git init</a></li>
+                    <li><a href="#git-add">git add</a></li>
+                    <li><a href="#git-commit">git commit</a></li>
+                    <li><a href="#git-status">git status</a></li>
+                    <li><a href="#git-config">git config</a></li>
+                    <li><a href="#git-branch">git branch</a></li>
+                    <li><a href="#git-checkout">git checkout</a></li>
+                    <li><a href="#git-merge">git merge</a></li>
+                  </ul>
+                </li>
+                <hr class="indice-hr soft-hr">
+                <li>
+                  <div class="ind-box">
+                    <button class="botao-indice" data-value="2" isActive="false"><img src="./images/arrows-down-double34_97743.png" alt="" id="arrowIMG2"></button>
+                    <a href="#repositorios_remotos">Trabalhando com repositórios remotos</a>
+                  </div>
+                  <ul class="content" id="content2">
+                    <li><a href="#git-remote">git remote</a></li>
+                    <li><a href="#git-clone">git clone</a></li>
+                    <li><a href="#git-pull">git pull</a></li>
+                    <li><a href="#git-push">git push</a></li>
+                  </ul>
+                </li>
+                <hr class="indice-hr soft-hr">
+                <li>
+                  <div class="ind-box">
+                    <button class="botao-indice" data-value="3" isActive="false"><img src="./images/arrows-down-double34_97743.png" alt="" id="arrowIMG3"></button>
+                    <a href="#comandos_avancados">Comandos avançados</a>
+                  </div>
+                  <ul class="content" id="content3">
+                    <li><a href="#git-stash">git stash</a></li>
+                    <li><a href="#git-log">git log</a></li>
+                    <li><a href="#git-rm">git rm</a></li>
+                  </ul>
+                </li>
+                <hr class="indice-hr soft-hr">
+              </ul>
           </div>
 
           <hr />
-          <div class="sessao">
+          <div class="sessao" id="repositorios_locais">
             <div class="image-div" style="background: #ffffff">
               <img
                 src="./images/Git-Icon-1788C.png"
                 alt="this guide is a Git toolbox"
               />
             </div>
-            <h2 id="local">Trabalhando com repositórios Locais</h2>
+            <h2>Trabalhando com repositórios Locais</h2>
             <hr class="soft-hr" />
 
-            <div class="comand-box">
-              <h3 id="git-init">git init</h3>
+            <div id="git-init" class="command-box">
+              <h3>git init</h3>
             
               <p>
                 O comando git init é usado para transformar um diretório comum em um repositório Git vazio. Este é o primeiro passo para criar um repositório onde você poderá versionar seu código.            </p>
@@ -80,8 +134,8 @@ Repositório Git vazio inicializado em ~/site/.git/</code></pre>
 
             <hr class="soft-hr" />
 
-            <div class="command-box">
-              <h3 id="git-add">git add</h3>
+            <div id="git-add" class="command-box">
+              <h3>git add</h3>
           
               <p>
                 O comando git add é como colocar seus arquivos em uma bandeja de preparação antes de confirmá-los no Git. Você coloca os arquivos na bandeja um por um ou todos de uma vez. É uma etapa necessária antes de salvar as mudanças no Git. Isso ajuda a escolher quais alterações você deseja incluir na próxima "salvação". Em resumo, o git add coloca seus arquivos na fila para serem confirmados no Git.            </p>
@@ -104,8 +158,8 @@ $ git add css</code></pre>
           
             <hr class="soft-hr" /> 
 
-            <div class="command-box">
-              <h3 id="git-commit">git commit</h3>
+            <div id="git-commit" class="command-box">
+              <h3>git commit</h3>
               <p>
                 O comando git commit é como salvar um ponto de verificação das mudanças que você fez em seus arquivos. Cada ponto de verificação tem um número único. É importante adicionar uma mensagem a cada ponto de verificação para dizer o que foi feito. Isso ajuda a lembrar ou explicar as mudanças. Em resumo, git commit é como salvar as mudanças no Git, e a mensagem ajuda a entender o que foi feito.
               </p>
@@ -125,8 +179,8 @@ create mode 100644 index.html</code></pre>
           
             <hr class="soft-hr" />
 
-            <div class="command-box">
-              <h3 id="git-status">git status</h3>
+            <div id="git-status" class="command-box">
+              <h3>git status</h3>
                   
               <p>
                 O comando git status fornece informações sobre o estado atual do seu repositório Git. Ele mostra o ramo em que você está trabalhando e se há arquivos modificados. Se houver arquivos modificados, ele informará se essas alterações foram ou não preparadas para uma confirmação. Em resumo, o git status ajuda a manter o controle das mudanças em seu projeto Git e indica se você precisa tomar medidas, como preparar e confirmar as alterações.
@@ -161,8 +215,8 @@ nothing to commit, working tree clean</code></pre>
 
           <hr class="soft-hr" />
 
-            <div class="command-box">
-              <h3 id="git-config">git config</h3>
+            <div id="git-config" class="command-box">
+              <h3>git config</h3>
 
               <p>
                 O comando git config permite que você ajuste configurações importantes no Git, como seu nome de usuário (user.name) e endereço de email (user.email). Essas configurações determinam como seus commits são identificados em seu próprio computador.          </p>
@@ -185,8 +239,8 @@ $ git config user.name "Erick Ribeiro"</code></pre>
             </div>
 
             <hr class="soft-hr" />
-            <div class="command-box">
-              <h3 id="git-branch">git branch</h3>
+            <div id="git-branch" class="command-box">
+              <h3>git branch</h3>
 
               <p>
                 O comando git branch é usado para verificar em qual branch o repositório local está, criar um nova branch ou excluir uma branch existente.
@@ -220,8 +274,8 @@ Deleted branch new_feature (was 0254c3d).</code></pre>
 
           <hr class="soft-hr" />
 
-          <div class="command-box">
-            <h3 id="git-checkout">git checkout</h3>
+          <div id="git-checkout" class="command-box">
+            <h3>git checkout</h3>
 
             <p>
               O comando git checkout é usado para começar a trabalhar em uma branch diferente no Git. Ele permite que você mude o foco do seu trabalho para outra branch.
@@ -247,8 +301,8 @@ Switched to a new branch 'staging'</code></pre>
           </div>
 
           <hr class="soft-hr" />
-          <div class="command-box">
-            <h3 id="git-merge">git merge</h3>
+          <div id="git-merge" class="command-box">
+            <h3>git merge</h3>
 
             <p>
               O comando git merge é usado para combinar as mudanças de uma branch específica na branch atual. Por exemplo, você pode usar isso para incorporar as alterações feitas em uma branch de desenvolvimento em sua branch principal.          </p>
@@ -272,7 +326,7 @@ Fast-forward
       </div>
 
       <hr />
-      <div class="sessao">
+      <div class="sessao" id="repositorios_remotos">
 
         <div class="image-div" style="background: #ffffff">
           <img
@@ -284,8 +338,8 @@ Fast-forward
           <h2 id="remote">Trabalhando com repositórios remotos</h2>
           <hr class="soft-hr" />
 
-        <div class="command-box">
-          <h3 id="git-remote">git remote</h3>
+        <div id="git-remote" class="command-box">
+          <h3>git remote</h3>
 
           <p>
             O comando git remote é utilizado para conectar um repositório local a um repositório remoto. Um repositório remoto pode ser nomeado para evitar a necessidade de lembrar a URL do repositório.
@@ -318,9 +372,9 @@ git remote add origin URL_do_repositório_remoto (push)</code></pre>
           </p>
 
         </div>
-        <div>
-          <hr class="soft-hr" />
-          <h3 id="git-clone">git clone</h3>
+        <hr class="soft-hr" />
+        <div id="git-clone" class="command-box">
+          <h3>git clone</h3>
 
           <p>
             O comando git clone é usado para criar uma cópia local de trabalho de um repositório remoto existente. Ele faz o download do repositório e cria uma cópia local em seu computador. Clonar é o equivalente ao git init ao trabalhar com um repositório remoto. O Git criará um diretório local com todos os arquivos e o histórico do repositório.
@@ -344,8 +398,8 @@ Checking connectivity... done.</code></pre>
         </div>
 
           <hr class="soft-hr" />
-        <div class="command-box">
-          <h3 id="git-pull">git pull</h3>
+        <div id="git-pull" class="command-box">
+          <h3>git pull</h3>
 
           <p>
             O comando git pull é usado para obter a versão mais recente de um repositório. Isso significa trazer as alterações do repositório remoto para o computador local.
@@ -375,8 +429,8 @@ Already up-to-date.</code></pre>
         </div>
 
           <hr class="soft-hr" />
-        <div class="command-box">
-          <h3 id="git-push">git push</h3>
+        <div id="git-push" class="command-box">
+          <h3>git push</h3>
 
           <p>
             O comando git push é utilizado para enviar os commits locais para o repositório remoto. Ele requer dois parâmetros: o repositório remoto e o branch para o qual você deseja enviar os commits.
@@ -421,7 +475,7 @@ To git@nome_conta.git.jeredebe.com:/nome_conta/nome_repositorio.git
       </div>
 
         <hr />  
-        <div class="sessao">
+        <div class="sessao" id="comandos_avancados">
           <div class="image-div" style="background: #ffffff">
           <img
             src="./images/Git-Icon-Black.png"
@@ -433,8 +487,8 @@ To git@nome_conta.git.jeredebe.com:/nome_conta/nome_repositorio.git
 
           <hr class="soft-hr" />
         
-        <div class="command-box">
-          <h3 id="git-stash">git stash</h3>
+        <div id="git-stash" class="command-box">
+          <h3>git stash</h3>
 
           <p>
             O comando git stash é usado para salvar as alterações quando elas não estão prontas para serem confirmadas no repositório. Isso permite armazenar o trabalho em andamento e obter um diretório de trabalho limpo. Por exemplo, quando você está trabalhando em uma nova funcionalidade que não está completa, mas precisa resolver um erro urgente.
@@ -472,9 +526,9 @@ Dropped refs/stash@{0} (3561897724c1f448ae001edf3ef57415778755ec)</code></pre>
         </div>
           <hr class="soft-hr" />
 
-        <div class="command-box">
+        <div id="git-log" class="command-box">
 
-          <h3 id="git-log">git log</h3>
+          <h3>git log</h3>
 
           <p>
 O comando git log é usado para mostrar o histórico cronológico de commits em um repositório. Isso ajuda a fornecer contexto e histórico para o repositório. O git log está disponível imediatamente após clonar um repositório recentemente, permitindo visualizar o histórico.
@@ -528,8 +582,8 @@ Date:   Tue Oct 25 17:46:11 2016 -0500
 
       <hr class="soft-hr" />
 
-      <div class="command-box">
-          <h3 id="git-rm">git rm</h3>
+      <div id="git-rm" class="command-box">
+          <h3>git rm</h3>
 
           <p>
             O comando git rm é utilizado para remover arquivos ou diretórios da área de preparação (staging area) de trabalho. Ao usar git rm, existem duas opções a serem consideradas: forçar (force) e em cache (cached). Executar o comando com "force" deleta o arquivo completamente, enquanto o comando "cached" remove o arquivo apenas da área de preparação. Ao remover um diretório completo, é necessário usar o comando recursivo.
@@ -576,9 +630,12 @@ rm 'css/style.min.css'
     </div>
 
       <hr>
-      <footer>fonte: <a href="http://guides.beanstalkapp.com/version-control/common-git-commands.html">http://guides.beanstalkapp.com/version-control/common-git-commands.html</a></footer>
+      <footer>
+        <p>Se quiser aprender mais comandos, clique no link:  </p>
+        <a href="https://gist.github.com/leocomelli/2545add34e4fec21ec16" target="_blank"> Lista de comandos úteis do GIT</a></footer>
         </article>
       </main>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
