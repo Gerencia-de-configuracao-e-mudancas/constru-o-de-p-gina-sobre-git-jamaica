@@ -420,6 +420,160 @@ To git@nome_conta.git.jeredebe.com:/nome_conta/nome_repositorio.git
       </div>
 
         <hr />  
+        <div class="image-div" style="background: #ffffff">
+          <img
+            src="./images/Git-Icon-Black.png"
+            alt="logo git"
+          />
+        </div>
+
+          <h2 id="advanced">Advanced Git Commands</h2>
+
+          <hr class="soft-hr" />
+        
+        <div class="command-box">
+          <h3 id="git-stash">git stash</h3>
+
+          <p>
+            O comando git stash é usado para salvar as alterações quando elas não estão prontas para serem confirmadas no repositório. Isso permite armazenar o trabalho em andamento e obter um diretório de trabalho limpo. Por exemplo, quando você está trabalhando em uma nova funcionalidade que não está completa, mas precisa resolver um erro urgente.
+          </p>
+
+          <p>Uso:</p>
+
+          <pre class="sample"><code># Armazenar o trabalho atual, incluindo arquivos não rastreados
+$ git stash -u
+
+# Recuperar o trabalho armazenado para o diretório de trabalho
+$ git stash pop</code></pre>
+
+          <p>Na Prática:</p>
+
+          <pre class="sample"><code>#Armazenar o trabalho atual
+$ git stash -u
+Saved working directory and index state WIP on SecretTesting: 4c0f37c Adding new file to branch
+HEAD is now at 4c0f37c Adding new file to branch
+
+# Recuperar o trabalho armazenado para o diretório de trabalho
+$ git stash pop
+On branch SecretTesting
+Your branch and 'origin/SecretTesting' have diverged,
+and have 1 and 1 different commit each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+Changes not staged for commit:
+  (use "git add &lt;file&gt;..." to update what will be committed)
+  (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+
+        <span class="redtext">modified:   index.html</span>
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (3561897724c1f448ae001edf3ef57415778755ec)</code></pre>
+        </div>
+          <hr class="soft-hr" />
+
+        <div>
+
+          <h3 id="git-log">git log</h3>
+
+          <p>
+O comando git log é usado para mostrar o histórico cronológico de commits em um repositório. Isso ajuda a fornecer contexto e histórico para o repositório. O git log está disponível imediatamente após clonar um repositório recentemente, permitindo visualizar o histórico.
+          </p>
+
+          <p>Uso:</p>
+
+          <pre class="sample"><code># Mostrar todo o git log
+$ git log
+
+# Mostrar todo o git log com parâmetros de data
+$ git log --&lt;after/before/since/until&gt;=&lt;date&gt;
+
+# Mostrar todo o git log com base no autor do commit
+$ git log --&lt;author&gt;="Nome do Autor"
+</code></pre>
+
+          <p>Na Prática:</p>
+
+          <pre class="sample"><code># Mostrar todo o git log
+$ git log
+<span style="color:yellow">commit 4c0f37c711623d20fc60b9cbcf393d515945952f</span>
+Author: Tasso ossat &lt;meu@email.com&gt;
+Date:   Tue Oct 25 17:46:11 2016 -0500
+
+    Melhorando o footer da pagina principal
+    
+<span style="color:yellow">commit 0254c3da3add4ebe9d7e1f2e76f015a209e1ef67</span>
+Author: Roberto Planta &lt;meu@email.com&gt;
+Date:   Wed Oct 19 16:27:27 2016 -0500
+
+    Meu primeiro commit
+
+# Mostrar todo o git log com parâmetros de data
+$ git log --before="Oct 20"
+<span style="color:yellow">commit 0254c3da3add4ebe9d7e1f2e76f015a209e1ef67</span>
+Author: Roberto Planta &lt;meu@email.com&gt;
+Date:   Wed Oct 19 16:27:27 2016 -0500
+
+    Meu primeiro commit
+
+#  Mostrar todo o git log com base no autor do commit
+$ git log --author="Roberto Planta"
+<span style="color:yellow">commit 4c0f37c711623d20fc60b9cbcf393d515945952f</span>
+Author: Roberto Planta &lt;meu@email.com&gt;
+Date:   Tue Oct 25 17:46:11 2016 -0500
+
+    Melhorando o footer da pagina principal </code></pre>
+
+      </div>
+
+      <hr class="soft-hr" />
+
+      <div>
+          <h3 id="git-rm">git rm</h3>
+
+          <p>
+            O comando git rm é utilizado para remover arquivos ou diretórios da área de preparação (staging area) de trabalho. Ao usar git rm, existem duas opções a serem consideradas: forçar (force) e em cache (cached). Executar o comando com "force" deleta o arquivo completamente, enquanto o comando "cached" remove o arquivo apenas da área de preparação. Ao remover um diretório completo, é necessário usar o comando recursivo.
+          </p>
+
+          <p>Uso:</p>
+
+          <pre
+            class="sample"
+          ><code># Para remover um arquivo da área de preparação (cached):
+$ git rm --cached &lt;nome_arquivo&gt;
+
+# Para excluir um arquivo (force):
+$ git rm -f &lt;nome_arquivo&gt;
+
+# Para remover um diretório inteiro da área de preparação (cached):
+$ git rm -r --cached &lt;nome_diretório&gt;
+
+# Para excluir um diretório inteiro (force):
+$ git rm -r -f &lt;nome_diretório&gt;</code></pre>
+
+          <p>Na Prática:</p>
+
+          <pre class="sample"><code># Para remover um arquivo da área de preparação:
+$ git rm --cached css/style.css
+rm 'css/style.css'
+
+# Para excluir um arquivo (force):
+$ git rm -f css/style.css
+rm 'css/style.css'
+
+# Para remover um diretório inteiro da área de preparação:
+$ git rm -r --cached css/
+rm 'css/style.css'
+rm 'css/style.min.css'
+
+# Para excluir um diretório inteiro (force):
+$ git rm -r -f css/
+rm 'css/style.css'
+rm 'css/style.min.css'
+</code></pre>
+
+      </div>
+
+      <hr>
+      <footer>fonte: <a href="http://guides.beanstalkapp.com/version-control/common-git-commands.html">http://guides.beanstalkapp.com/version-control/common-git-commands.html</a></footer>
         </article>
       </main>
     </div>
